@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Logical Resolution</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<style type="text/css">
+			p,span{
+				font-size: 16px;
+				line-height: 20px;
+				font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Logical Resolution:</p>
+		<p id="resolution"></p>
+		<script type="text/javascript">
+			document.getElementById("resolution").innerHTML = window.screen.width + "×" + window.screen.height;
+		</script>
+	</body>
+</html>
