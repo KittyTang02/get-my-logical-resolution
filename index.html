@@ -5,18 +5,88 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<style type="text/css">
-			p,span{
+			html,body{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+			}
+			p{
+				margin: 0;
+			}
+			#background{
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(168deg,#a6eafb -3%, #ffffff 96%);
+			}
+			#code-editor-outline{
+				height: 120px;
+				width: 282px;
+				background-color: #021129;
+				border-radius: 3px;
+				top: 22%;
+				left: 50%;
+				margin-left:-141px;
+				position: fixed;
 				font-size: 16px;
 				line-height: 20px;
-				font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+			}
+			#line-counter{
+				width: 49px;
+				height: 97px;
+				background-color: #112038;
+				border-radius: 0px 0px 0px 3px;
+				float: left;
+				margin-top: 23px;
+				color: #5A6A83;
+			}
+			#count-number{
+				margin-left: 21px;
+				margin-top: 3px;
+			}
+			#code-box{
+				width: 233px;
+				height: 97px;
+				float: right;
+				color: #ffffff;
+				margin-top: 23px;
+			}
+			#code-content{
+				margin-top: 3px;
+				margin-left: 17px;
+			}
+			.key{
+				color: #A6EAFB;
+			}
+			.value{
+				color: #FF8181;
 			}
 		</style>
 	</head>
 	<body>
-		<p>Logical Resolution:</p>
-		<p id="resolution"></p>
+		<div id="background">
+			<div id="code-editor-outline">
+				<div id="line-counter">
+					<div id="count-number">
+						<p>1</p>
+						<p>2</p>
+						<p>3</p>
+						<p>4</p>
+					</div>
+				</div>
+				<div id="code-box">
+					<div id="code-content">
+						<p>logical-resolution {</p>
+						<p>&nbsp&nbsp<span class="key">width</span>: <span class="value" id="width"></span>;</p>
+						<p>&nbsp&nbsp<span class="key">height</span>: <span class="value" id="height"></span></p>
+						<p>}</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
-			document.getElementById("resolution").innerHTML = window.screen.width + "×" + window.screen.height;
+			document.getElementById("width").innerHTML = window.screen.width;
+			document.getElementById("height").innerHTML = window.screen.height;
 		</script>
 	</body>
 </html>
